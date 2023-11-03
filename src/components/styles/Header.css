@@ -1,0 +1,70 @@
+/* src/components/Header.css */
+
+.header {
+    background-color: var(--midnight-blue);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 110px;
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    overflow: hidden; /* Ensures the pseudo-element is clipped to the header's dimensions */
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px; /* Adjust the height to control the size of the fading effect */
+    background: linear-gradient(to bottom, transparent, var(--midnight-blue));
+}
+
+.header .logo {
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Let's assume the movie-style you referred is a neon or glow effect */
+.header .logo {
+    text-transform: uppercase;
+    color: #ffffff;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+    }
+    to {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #FFA07A, 0 0 40px #FFA07A, 0 0 50px #FFA07A, 0 0 60px #FFA07A, 0 0 70px #FFA07A, 0 0 80px #FFA07A;
+    }
+}
+
+.header .profile-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    margin-right: 50px;
+}
+
+.header .profile-link:hover {
+    background-color: var(--button-hover);
+}
+
+.logo-avatar{
+    width: 100px;
+    object-fit: contain;
+    display: block;
+    margin-left: 50px;
+}

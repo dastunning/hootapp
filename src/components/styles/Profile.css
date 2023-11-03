@@ -1,0 +1,154 @@
+/* src/components/Profile.css */
+
+/* Import Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--sky-white-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    flex-direction: column;
+}
+
+.profile-avatar {
+    width: 150px; /* or the size you want */
+    height: 150px; /* must be the same as width to create a circle */
+    object-fit: cover; /* this will cover the area without stretching the image */
+}
+
+.profile-avatar img {
+    border-radius: 50%;
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border: 3px solid var(--midnight-blue);
+}
+
+.profile-info h1,
+.profile-info p {
+    color: var(--midnight-blue);
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profile-info p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Adjust the input and textarea to use the Roboto font */
+.profile input,
+.profile textarea {
+    background-color: white;
+    border: 2px solid var(--midnight-blue);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--midnight-blue);
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+textarea{
+    background-color: white;
+    border: 2px solid var(--midnight-blue);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--midnight-blue);
+    margin-top: 10px;
+}
+
+
+/* Minimalistic button style */
+.profile-action{
+    margin-top: 20px;
+    margin-left: 500px;
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+.profile-action:hover,
+.profile-action:focus {
+    background-color: #16437E;
+    color: #ffffff;
+}
+
+.profile-action:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+.profile-action:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+.profile-avatar {
+    object-fit: cover;
+    left: 0;
+}
+
+.profile-info {
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--midnight-blue);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use your preferred font */
+    text-transform: capitalize;
+}
+
+.profile-quote {
+    font-size: 1rem;
+    color: var(--midnight-blue);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.profile-dob,
+.profile-location {
+    font-size: 0.9rem;
+    color: var(--midnight-blue);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 6px;
+}
+
+.edit-profile-info{
+    margin-top: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: flex-start;
+}

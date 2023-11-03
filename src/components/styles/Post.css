@@ -1,0 +1,44 @@
+/* src/components/Post.css */
+
+.post {
+    background-color: var(--sky-white-blue);
+    border: 2px solid var(--midnight-blue);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+    margin-top: 5px;
+}
+
+.post:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--midnight-blue);
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.post-actions button {
+    background: transparent;
+    color: var(--midnight-blue);
+    border: 2px solid var(--midnight-blue);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.post-actions button:hover {
+    background-color: var(--midnight-blue);
+    color: white;
+}
+
+/* Add styles for edit and delete actions if needed */
